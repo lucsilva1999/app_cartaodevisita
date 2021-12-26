@@ -6,7 +6,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,20 +13,29 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.deepOrange,
         body: SafeArea(
-          child: Column(
-            children: [
-              Container(
-                  height: 100.0,
-                  width: 100.0,
-                  alignment: Alignment.center,
-                  color:  Colors.white,
-                  child: Text("Container 1")
-              )
-            ],
-          )
-        ),
+            child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Container(
+                width: 100.0,
+                alignment: Alignment.center,
+                color: Colors.white,
+                child: Text("Container 1")),
+            SizedBox(width: 20.0),
+            Container(
+                width: 100.0,
+                alignment: Alignment.center,
+                color: Colors.blue,
+                child: Text("Container 2")),
+            SizedBox(width: 20.0),
+            Container(
+                width: 100.0,
+                alignment: Alignment.center,
+                color: Colors.red,
+                child: Text("Container 3")),
+          ],
+        )),
       ),
     );
   }
 }
-
