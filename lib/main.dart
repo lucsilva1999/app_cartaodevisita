@@ -13,28 +13,23 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.deepOrange,
         body: SafeArea(
-            child: Row(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Container(
-                width: 100.0,
-                alignment: Alignment.center,
-                color: Colors.white,
-                child: Text("Container 1")),
-            SizedBox(width: 20.0),
-            Container(
-                width: 100.0,
-                alignment: Alignment.center,
-                color: Colors.blue,
-                child: Text("Container 2")),
-            SizedBox(width: 20.0),
-            Container(
-                width: 100.0,
-                alignment: Alignment.center,
-                color: Colors.red,
-                child: Text("Container 3")),
-          ],
-        )),
+            child: Column(
+                children: const <Widget>[
+              CircleAvatar(
+                radius: 50.0,
+                backgroundColor: Colors.white,
+                backgroundImage: AssetImage("assets/images/dog.jpg"),
+              ),
+                Text(
+                  "Lucas Silva",
+                  style: TextStyle(
+                    fontSize: 40,
+                    color: Colors.black,
+                  ),
+                )
+                ]
+            )
+        ),
       ),
     );
   }
